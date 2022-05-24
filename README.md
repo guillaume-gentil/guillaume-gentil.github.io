@@ -1,8 +1,8 @@
 # Bienvenue sur le Github de Guillaume Gentil !
 
-## Avant-propos
+## Je me présente
 
-Je me présente : Guillaume Gentil, j'ai 34ans, j'aspire à devenir Développeur Web.
+Je m'appelle Guillaume Gentil, j'ai 34ans, j'aspire à devenir Développeur Web.
 
 Je suis actuellement en formation chez O'clock, une école de formation en téléprésentiel.
 <br>
@@ -14,14 +14,13 @@ D'ici là, j'aurai acquis de bonnes connaissances dans les langages et technolog
 <br>
 Je suis également capable d'utiliser : **Python** et **Ruby**
 
-#
+
 ## Liens externes
 
 * Mon CV linkedin : [/ggentil](https://www.linkedin.com/in/ggentil/)
 * Ma formation de Développeur Web : [O'clock](https://oclock.io/)
 * Mon titre professionnel : [Développeur web et web mobile](https://www.francecompetences.fr/recherche/rncp/31114/)
 
-#
 ## Qui suis-je ?
 
 Si vous êtes arrivez jusqu'ici, c'est que vous souhaitez en savoir un peu plus sur moi. Ça tombe bien, c'est par ici que ça se passe !
@@ -85,7 +84,6 @@ En attendant de pouvoir échanger avec vous en vrai j'ajouterai que je suis quel
 
 J'ai hâte de pouvoir mettre en œuvre mes compétences au sein d'une équipe de développeurs.
 
-#
 ## Me contacter
 
 Pour me contacter c'est simple, on se retrouve sur Linkedin !  =>  [/ggentil](https://www.linkedin.com/in/ggentil/)

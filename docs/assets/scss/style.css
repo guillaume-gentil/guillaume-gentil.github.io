@@ -1,0 +1,493 @@
+@charset "UTF-8";
+/*
+  Personal reset based on :
+    https://www.joshwcomeau.com/css/custom-css-reset/
+    https://andy-bell.co.uk/a-modern-css-reset/ 
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ol[role=list],
+ul[role=list] {
+  list-style: none;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.8;
+  /* désactive les ligatures et le crénage, https://developer.mozilla.org/fr/docs/Web/CSS/text-rendering */
+  text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(/assets/fonts/robotocondensed-light-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Saira";
+  src: url(/assets/fonts/sairastencilone-regular-webfont.woff2) format("woff2");
+}
+.nbsp {
+  white-space: nowrap;
+}
+
+.more-link {
+  text-align: end;
+  color: #212529;
+}
+.more-link a:link {
+  color: currentColor;
+}
+.more-link a:visited {
+  color: currentColor;
+}
+.more-link a:hover {
+  opacity: 0.6;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+@media (max-width: 995px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 995px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: Saira, Roboto, sans-serif;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 3.6rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding-bottom: 0.8rem;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+p {
+  letter-spacing: 1px;
+  padding-bottom: 0.8rem;
+}
+p:first-of-type {
+  padding-top: 0.8rem;
+}
+p a:link {
+  color: #8E1534;
+}
+p a:visited {
+  color: #8E1534;
+}
+p a:hover {
+  opacity: 0.5;
+}
+
+figcaption {
+  font-family: Courier, monospace;
+  text-align: center;
+  font-style: italic;
+}
+
+html, body {
+  background-color: #f0f0f0;
+}
+
+section {
+  margin-bottom: 7.2rem !important;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+section h3 {
+  margin-top: 0.8rem;
+}
+section p {
+  padding-left: 0.8rem;
+  padding-right: 0;
+}
+
+figure {
+  width: 90%;
+  margin: auto;
+  margin-top: 3.6rem;
+}
+
+.social {
+  display: flex;
+}
+.social__link {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.social__link__ico {
+  width: 2.4rem;
+  height: 1.6rem;
+}
+.social__link__ico:hover {
+  opacity: 0.5;
+}
+
+.navbar {
+  padding: 0;
+  margin-bottom: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem 3.6rem;
+}
+.navbar__link {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+.navbar__link:hover {
+  border-bottom: 2px currentColor solid;
+}
+.navbar__link--active {
+  border-bottom: 2px #FFAE0D solid;
+  color: #f0f0f0;
+}
+
+.open-to-work {
+  display: inline-block;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  background-color: #FFAE0D;
+  color: #212529;
+  text-align: center;
+}
+
+.burger {
+  background-color: #f0f0f0;
+}
+.burger__ico {
+  width: 2.4rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  fill: #212529;
+}
+.burger__ico:hover {
+  opacity: 0.5;
+}
+@media (min-width: 995px) {
+  .burger {
+    position: fixed;
+    top: 0;
+    right: 15%;
+  }
+}
+@media (max-width: 995px) {
+  .burger {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}
+
+.hero {
+  margin-top: 2.4rem;
+  margin-bottom: 7.2rem;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 7.2rem;
+  padding-top: 3.6rem;
+  background-color: #212529;
+  color: #f0f0f0;
+  text-align: center;
+}
+.footer__text {
+  max-width: 534px;
+  margin: auto;
+}
+.footer__social {
+  display: inline-flex;
+  fill: #d99000;
+}
+.footer__date {
+  background-color: #f0f0f0;
+  color: #212529;
+  box-shadow: inset 0 0.4rem 1.6rem #212529;
+  padding-top: 0.4rem;
+}
+
+.aside {
+  min-width: 310px;
+  padding-left: 0.8rem;
+  padding-right: auto;
+  border-left: 1px solid #212529;
+}
+@media (min-width: 995px) {
+  .aside {
+    flex: 0 1;
+  }
+}
+@media (max-width: 995px) {
+  .aside {
+    align-self: center;
+  }
+}
+
+.card-profil__picture {
+  min-width: 270px;
+  min-height: 400px;
+  border-radius: 3px;
+}
+.card-profil__desc {
+  min-width: 310px;
+}
+.card-profil__desc__title::after {
+  content: "";
+  display: block;
+  background-color: #FFAE0D;
+  width: 50px;
+  height: 3px;
+  margin-top: 0.4rem;
+}
+@media (min-width: 995px) {
+  .card-profil {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.6rem 3.6rem;
+  }
+  .card-profil__picture, .card-profil__desc {
+    flex: 1;
+  }
+}
+@media (max-width: 995px) {
+  .card-profil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.6rem 3.6rem;
+  }
+  .card-profil__desc {
+    max-width: 534px;
+  }
+}
+
+.card-skill {
+  margin-top: 1.6rem;
+  margin-bottom: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.6rem;
+}
+.card-skill__card {
+  flex: 0 1 320px;
+}
+.card-skill__card__title {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.card-skill__card__title::after {
+  content: "";
+  display: block;
+  background-color: #6FD6F7;
+  width: 50px;
+  height: 3px;
+  margin: auto;
+  margin-top: 0.4rem;
+}
+.card-skill__card__desc {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-align: center;
+}
+
+.portfolio .card-portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 3.6rem 2.4rem;
+  margin: auto 12px;
+}
+.portfolio .card-portfolio .card .link {
+  display: block;
+  text-decoration: none;
+}
+.portfolio .card-portfolio .card .link .picture {
+  filter: sepia(90%);
+  transition: filter 0.4s;
+}
+.portfolio .card-portfolio .card .link .picture:hover {
+  filter: none;
+}
+.portfolio .card-portfolio .card .link .content {
+  padding: 0.2rem 0.6rem;
+}
+
+.home__author {
+  margin: auto;
+}
+@media (min-width: 995px) {
+  .home__author {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem 2.4rem;
+  }
+}
+@media (max-width: 995px) {
+  .home__author {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem 2.4rem;
+  }
+}
+
+.parcours {
+  margin: auto;
+}
+.parcours h2::after {
+  content: "";
+  display: block;
+  background-color: #FFAE0D;
+  width: 100px;
+  height: 3px;
+  margin-top: 0.4rem;
+}
+.parcours h3 {
+  margin-top: 2.4rem;
+}
+.parcours h3::before {
+  content: "";
+  display: inline-block;
+  background-color: #FFAE0D;
+  padding-top: 0.8rem;
+  padding-right: 0.8rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+.parcours__intro__sommaire {
+  padding-left: 3.6rem;
+  padding-right: 0;
+}
+@media (min-width: 995px) {
+  .parcours {
+    max-width: 756px;
+  }
+}
+
+.portfolio {
+  margin: auto;
+}
+.portfolio h2::after {
+  content: "";
+  display: block;
+  background-color: #FFAE0D;
+  width: 100px;
+  height: 3px;
+  margin-top: 0.4rem;
+}
+.portfolio h3 {
+  margin-top: 2.4rem;
+}
+.portfolio h3::before {
+  content: "";
+  display: inline-block;
+  background-color: #FFAE0D;
+  padding-top: 0.8rem;
+  padding-right: 0.8rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+.portfolio__intro__sommaire {
+  padding-left: 3.6rem;
+  padding-right: 0;
+}
+@media (min-width: 995px) {
+  .portfolio {
+    max-width: 756px;
+  }
+}/*# sourceMappingURL=style.css.map */
